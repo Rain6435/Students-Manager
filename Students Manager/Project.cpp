@@ -1,6 +1,16 @@
-#include "Student.h"
+#include <string>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <list>
+#include <algorithm>
+#include <Windows.h>
+#include <fstream>
 #include "Cours.h"
 #include "Notes.h"
+#include "Student.h"
 
 using namespace std;
 
@@ -95,4 +105,3 @@ ostream& operator<<(ostream& ostr, const Notes& r) {
 	cout << endl;	
 	return ostr;
 }
-
