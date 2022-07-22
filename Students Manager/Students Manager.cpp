@@ -9,7 +9,6 @@
 #include <Windows.h>
 #include <fstream>
 #include "Cours.h"
-#include "Notes.h"
 #include "Student.h"
 using namespace std;
 
@@ -37,12 +36,7 @@ using namespace std;
 int main()
 {
     vector<Student> ListOfStudents;
-    vector<Notes> ListOfNotes;
-    vector<Cours> ListOfCourses;
+    vector<Cours> ListOfCourses; 
 
-    
-
-    createTemplateList(ListOfStudents);
-    DeleteStudent(ListOfStudents);
-    
+    cout << "Truth" ;
 }

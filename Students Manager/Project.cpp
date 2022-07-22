@@ -9,7 +9,6 @@
 #include <Windows.h>
 #include <fstream>
 #include "Cours.h"
-#include "Notes.h"
 #include "Student.h"
 
 using namespace std;
@@ -76,32 +75,12 @@ ostream& operator<<(ostream& ostr, const Cours& r) {
 	cout << ",";
 	ostr << r.CourseTitle;
 	cout << endl;
-
 	return ostr;
 }
 
-//Flux d'entrée pour les élèments de types Notes
-istream& operator>>(istream& istr, Notes& r) {
-	istr >> r.Identifier;
-	cout << endl;
-	istr >> r.CourseCode;
-	cout << endl;
-	istr >> r.Note;
-	cout << endl;
-	istr >> r.StudentID;
-	cout << endl;
-	return istr;
-}
+bool operator==(const Cours& r, const Cours& v){
 
-//Flux de sortie pour les élèments de types Notes
-ostream& operator<<(ostream& ostr, const Notes& r) {
-	ostr << r.Identifier;
-	cout << ",";
-	ostr << r.Note;
-	cout << ",";
-	ostr << r.StudentID;
-	cout << ",";
-	ostr << r.CourseCode;
-	cout << endl;	
-	return ostr;
+}
+bool operator!=(const Cours& r, const Cours& v){
+	
 }

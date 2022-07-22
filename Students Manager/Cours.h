@@ -2,31 +2,35 @@
 #ifndef COURS_H
 #define COURS_H
 
-
 #include <string>
 #include <iostream>
+#include "Student.h"
 using namespace std;
 
 
-//CrÃ©ation de la classe Cours
+//Création de la classe Cours
 class Cours{
-    // Ajout des opÃ©rateurs d'entrÃ©e et de sortie
+    // Ajout des opérateurs d'entrée et de sortie
     friend istream& operator>>(istream&, Cours&);					
-    friend ostream& operator<<(ostream&, const Cours&);			
+    friend ostream& operator<<(ostream&, const Cours&);
+    friend bool operator==(const Cours& v, const Cours& r);
+    friend bool operator!=(const Cours& v, const Cours& r);
 public:
-    //DÃ©finition des objets de la classe 
+    //Définition des objets de la classe 
     int CourseID;
     string CourseCode;
     string CourseTitle;
+    vector<Student> ListMembers;
 
-//DÃ©finition du constructeur par dÃ©faut
-public:Cours();
-//DÃ©finition du constructeur paramÃ¨trÃ©
-public:Cours(int CID, string Code, string Title)
+//Définition du constructeur par défaut
+public:Cours() {};
+//Définition du constructeur paramètré
+public:Cours(int CID, string Code, string Title, vector<Student> CMembers)
 {
     CourseID = CID;
     CourseCode = Code;
     CourseTitle = Title;
+    ListMembers = CMembers;
 }
 };
 
