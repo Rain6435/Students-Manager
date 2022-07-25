@@ -15,6 +15,24 @@ class Cours{
     friend ostream& operator<<(ostream&, const Cours&);
     friend bool operator==(const Cours& v, const Cours& r);
     friend bool operator!=(const Cours& v, const Cours& r);
+
+    static Cours CourForCreate(){
+        int CID; string CCode; string CTitle;
+        cout << "What is the course ID? \n";
+        cin >> CID;
+        cout << "What is the course code? \n";
+        cin >> CCode;
+        cout << "What is the course title? \n";
+        cin >> CTitle;
+        return Cours(CID,CCode,CTitle);
+    }
+
+    friend void CreateCours(vector<Cours> s){
+        Cours cour = CourForCreate();
+    }
+
+    friend void AddMembers(vector<Cours> s, vector<Student> k){}
+
 public:
     //Définition des objets de la classe 
     int CourseID;
@@ -31,6 +49,11 @@ public:Cours(int CID, string Code, string Title, vector<Student> CMembers)
     CourseCode = Code;
     CourseTitle = Title;
     ListMembers = CMembers;
+}
+public:Cours(int CID, string Code, string Title){
+    CourseID = CID;
+    CourseCode = Code;
+    CourseTitle = Title;
 }
 };
 

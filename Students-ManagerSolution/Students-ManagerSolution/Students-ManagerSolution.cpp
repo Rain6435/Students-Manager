@@ -8,9 +8,8 @@
 #include <algorithm>
 #include <Windows.h>
 #include <fstream>
-#include "Cours.h"
+#include 
 #include "Student.h"
-
 using namespace std;
 
 //template < typename T>
@@ -36,7 +35,8 @@ using namespace std;
 
 int main()
 {
-	vector<Student> ListOfStudents;
-	Student g;
-	CreateTemplateList(ListOfStudents);
+    vector<Student> ListOfStudents;
+    vector<Cours> ListOfCourses;
+
+    cout << "Truth";
 }
